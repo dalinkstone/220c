@@ -1,0 +1,69 @@
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin24.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -dumpdir main- -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name main.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/dal/220c/debug_task -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/dal/220c/debug_task -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/kc/wjwtw82s4bb26cq_2vk4z_5r0000gn/T/main-38f8a5.o -x c++ main.cpp
+clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/SubFrameworks"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
+ /Library/Developer/CommandLineTools/usr/lib/clang/17/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -no_deduplicate -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o main -L/usr/local/lib /var/folders/kc/wjwtw82s4bb26cq_2vk4z_5r0000gn/T/main-38f8a5.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+Undefined symbols for architecture arm64:
+  "std::__1::locale::use_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::ctype<char> const& std::__1::use_facet[abi:ne190102]<std::__1::ctype<char>>(std::__1::locale const&) in main-38f8a5.o
+  "std::__1::ios_base::getloc() const", referenced from:
+      std::__1::basic_ios<char, std::__1::char_traits<char>>::widen[abi:ne190102](char) const in main-38f8a5.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__init(char const*, unsigned long)", referenced from:
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::basic_string[abi:ne190102]<0>(char const*) in main-38f8a5.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__init(unsigned long, char)", referenced from:
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::basic_string[abi:ne190102](unsigned long, char) in main-38f8a5.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::~basic_string()", referenced from:
+      _main in main-38f8a5.o
+      _main in main-38f8a5.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>> std::__1::__pad_and_output[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>>, char const*, char const*, char const*, std::__1::ios_base&, char) in main-38f8a5.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>> std::__1::__pad_and_output[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>>, char const*, char const*, char const*, std::__1::ios_base&, char) in main-38f8a5.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::put(char)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::endl[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&) in main-38f8a5.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::flush()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::endl[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&) in main-38f8a5.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char>>&)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::~sentry()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(int)", referenced from:
+      _main in main-38f8a5.o
+  "std::__1::cout", referenced from:
+      _main in main-38f8a5.o
+      _main in main-38f8a5.o
+  "std::__1::ctype<char>::id", referenced from:
+      std::__1::ctype<char> const& std::__1::use_facet[abi:ne190102]<std::__1::ctype<char>>(std::__1::locale const&) in main-38f8a5.o
+  "std::__1::locale::~locale()", referenced from:
+      std::__1::basic_ios<char, std::__1::char_traits<char>>::widen[abi:ne190102](char) const in main-38f8a5.o
+      std::__1::basic_ios<char, std::__1::char_traits<char>>::widen[abi:ne190102](char) const in main-38f8a5.o
+  "std::__1::ios_base::__set_badbit_and_consider_rethrow()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+  "std::__1::ios_base::clear(unsigned int)", referenced from:
+      std::__1::ios_base::setstate[abi:ne190102](unsigned int) in main-38f8a5.o
+  "std::terminate()", referenced from:
+      ___clang_call_terminate in main-38f8a5.o
+  "___cxa_begin_catch", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+      ___clang_call_terminate in main-38f8a5.o
+  "___cxa_end_catch", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ne190102]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in main-38f8a5.o
+  "___gxx_personality_v0", referenced from:
+      /private/var/folders/kc/wjwtw82s4bb26cq_2vk4z_5r0000gn/T/main-38f8a5.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
