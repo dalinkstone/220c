@@ -43,6 +43,8 @@ int main() {
     default:
       std::cout << "That is not a valid option. Try again.\n";
       break;
+
+    return 0;
     }
   }
 }
