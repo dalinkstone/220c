@@ -27,6 +27,9 @@ int main() {
     case 0:
       return EXIT_SUCCESS;
     case 1:
+      for(auto i = accounts.begin(); i != accounts.end(); i++) {
+					std::cout << *i;
+				}
       // std::cout << new_account;
       break;
     case 2:
