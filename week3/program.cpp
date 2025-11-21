@@ -39,17 +39,39 @@ int main() {
       // std::cout << new_account;
       break;
     case 2:
+      std::cout << "Enter the ID of the account to find: ";
+      std::cin >> id;
+
+      i = search(accounts, id);
+
+      if (i != accounts.end()) {
+        std::cout << "Found: ";
+        i->display_info();
+      } else {
+        std::cout << "Account not found.\n";
+      }
       std::cout << "Amount to deposit: ";
       std::cin >> deposit;
 
-      // new_account += deposit;
+      (*i) += deposit;
 
       break;
     case 3:
+      std::cout << "Enter the ID of the account to find: ";
+      std::cin >> id;
+
+      i = search(accounts, id);
+
+      if (i != accounts.end()) {
+        std::cout << "Found: ";
+        i->display_info();
+      } else {
+        std::cout << "Account not found.\n";
+      }
       std::cout << "Amount to withdraw: ";
       std::cin >> withdraw;
 
-      // new_account -= withdraw;
+      (*i) -= withdraw;
 
       break;
     case 4:
@@ -66,7 +88,7 @@ int main() {
         std::cout << "Found: ";
         i->display_info();
       } else {
-        std::cout << "Account not found.";
+        std::cout << "Account not found.\n";
       }
       break;
     default:
